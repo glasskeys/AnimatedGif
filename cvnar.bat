@@ -15,7 +15,7 @@ convert -delay 15 -loop 0 *.jpg %~n1.gif
 
 echo Cleaning up
 del *.jpg
-del *.xml
+del content.xml
 del %~n1.zip
 echo Finished
 
