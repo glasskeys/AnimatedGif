@@ -15,6 +15,10 @@ echo "Unzipping NAR file contents"
 unzip $1
 wait ${!}
 
+#Deleting extraneous files
+rm -f *_rlv.jpg
+wait ${!}
+
 echo "Resizing Images"
 #Resize Images
 mogrify -resize 320 *.jpg
@@ -24,5 +28,5 @@ convert -delay 15 -loop 0 *.jpg "$fname.gif"
 
 #Clean Up 
 rm -f *.jpg
-rm -f content.xml
+rm -f *.xml
 echo "Finished"
