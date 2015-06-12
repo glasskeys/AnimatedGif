@@ -8,14 +8,18 @@ copy %1 *.zip
 echo Unzipping NAR file contents
 7z e %~n1.zip
 
+echo Deleting extraneous JPG files
+del *_rlv.jpg
+
 echo Resizing images
 mogrify -resize 320 *.jpg
 
+echo Creating GIF
 convert -delay 15 -loop 0 *.jpg %~n1.gif
 
 echo Cleaning up
 del *.jpg
-del content.xml
+del *.xml
 del %~n1.zip
 echo Finished
 
