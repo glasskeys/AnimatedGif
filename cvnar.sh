@@ -27,6 +27,6 @@ mogrify -resize 320 *.jpg
 convert -delay 15 -loop 0 *.jpg "$fname.gif"
 
 #Clean Up 
-rm -f *.jpg
-rm -f *.xml
+#rm -f *.jpg
+#rm -f *.xml
 echo "Finished"
