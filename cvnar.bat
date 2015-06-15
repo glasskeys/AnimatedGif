@@ -18,8 +18,9 @@ echo Creating GIF
 convert -delay 15 -loop 0 *.jpg %~n1.gif
 
 echo Cleaning up
-#del *.jpg
-#del *.xml
-#del %~n1.zip
+REM Uncomment the next three lines to perform clean up
+REM del *.jpg
+REM del *.xml
+REM del %~n1.zip
 echo Finished
 
